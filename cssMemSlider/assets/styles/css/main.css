@@ -3,19 +3,27 @@
     margin: 0;
     padding: 0;
 }
-.header {
+body {
     position: relative;
     height: 100vh;
     background-color: rgb(105, 105, 105);
 }
 .slider-viewer {
     position: absolute;
-    overflow: hidden;
-    height: 900px;
-    width: 1000px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 900px;
+    width: 1000px;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+}
+.slider-group {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .mem {
     position: absolute;
@@ -29,4 +37,28 @@
 }
 .mem:first-child {
     display: block;
+}
+
+/* btns */
+.slide-buttons {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(24, 26, 13);
+    border-radius: 25px;
+    background-color: rgb(132, 200, 132);
+    transition: all 0.2s;
+}
+.slide-buttons:hover {
+    border-color: aliceblue;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.active-btn {
+    background-color: rgb(124, 65, 65);
 }
