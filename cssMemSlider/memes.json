@@ -1,0 +1,25 @@
+{
+    "memes": [
+        {
+            "images": "./assets/images/Funny-memes-dump-lolwhy4.jpg",
+            "text": "3 hours in the carwash and it's perfect",
+            "name": "car"
+        },
+        {
+            "images": "./assets/images/cat.jpg",
+            "text": "if you only focus on the problem",
+            "name": "cat"
+        },
+        {
+            "images": "./assets/images/dog.jpg",
+            "text": "our dog pretending to be a ship stuck in the Suez Canal",
+            "name": "dog"
+        },
+        {
+            "images": "./assets/images/memes-2020.jpeg",
+            "text": "march 2020, december 2020",
+            "name": "march"
+        }
+
+    ]   
+}
