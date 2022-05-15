@@ -1,1 +1,32 @@
 /* No CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(105, 105, 105);
+}
+.slider-viewer {
+    position: absolute;
+    overflow: hidden;
+    height: 900px;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mem {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+    background-color: rgb(65, 60, 60);
+    border-radius: 25px;
+}
+.mem:first-child {
+    display: block;
+}
