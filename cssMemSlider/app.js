@@ -1,4 +1,4 @@
-console.log('cssMemSlider')
+console.log('еще делаю')
 const memBlock = document.querySelector('.slide');
 const sliderGroup = document.querySelector('.buttons');
 let textMem = document.querySelector('.text-mem');
