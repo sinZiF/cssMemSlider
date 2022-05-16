@@ -83,3 +83,29 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* text mem */
+.text-mem {
+    font-size: 25px;
+    color: white;
+    padding: 40px 0;
+}
+
+.animation-text {
+    animation: text-opasiti 1s ease-in;
+}
+
+@keyframes text-opasiti {
+    0% {
+        opacity: .1;
+    }
+    50% {
+        opacity: .5;
+    }
+    80% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
+    }
+}

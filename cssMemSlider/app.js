@@ -1,6 +1,7 @@
 console.log('cssMemSlider')
 const memBlock = document.querySelector('.slide');
 const sliderGroup = document.querySelector('.buttons');
+let textMem = document.querySelector('.text-mem');
 
 const createMemSlider = (src, imgClass, alt, ind) => {
     const img = document.createElement('img');
@@ -19,6 +20,16 @@ const btn = (dataId) => {
     sliderGroup.appendChild(btn);
 }
 
+// text memes
+const addText = (e, dataset) => {
+    textMem.innerText = '';
+    textMem.innerText = dataset;
+    textMem.classList.add('animation-text')
+    let timer = setTimeout(() => {
+        textMem.classList.remove('animation-text')
+    }, 1000)
+}
+
 // add a event button
 const nextMem = (btn, imgs) => {
     sliderGroup.addEventListener('click', (e) => {
@@ -35,14 +46,14 @@ const nextMem = (btn, imgs) => {
                     img.classList.remove('active-slide')
                     if(img.dataset.ind === target.dataset.btnId) {
                         img.style.display = 'block';
-                        img.classList.add('active-slide')
+                        img.classList.add('active-slide');
                     } 
-                    
                 });
-                console.log(imgs)
+                // console.log(imgs)
             }
     
         }
+
     })
 }
 
@@ -63,14 +74,23 @@ memes('./memes.json')
         const mem = data.memes;
         mem.forEach((mem, ind) => {
             createMemSlider(mem.images, 'mem', mem.name, ind);
-            console.log(mem)
-            btn(ind);
+            btn(ind); 
         });
-
+        textMem.innerText = mem[0].text;
+        
         // next mem
         const nodeBtns = document.querySelectorAll('.slide-buttons');
         const imgs = document.querySelectorAll('.mem');
         nextMem(nodeBtns, imgs);
+        const textEvent = sliderGroup.addEventListener('click', function text(e) {
+            if(!e.target.className.includes('active-slide') && e.target.className.includes('slide-buttons')) {
+                textMem.innerText = '';
+                addText(textMem, mem[e.target.dataset.btnId].text)
+            }
+            
+            
+            
+        });
 
     } catch(err) {
         console.log(err)
